@@ -10,6 +10,7 @@ python = "^3.11"
 django = "5.1"
 psycopg-binary = "^3.2.3"
 psycopg = "^3.2.3"
+invoke = "^2.2.0"
 
 [tool.poetry.group.dev.dependencies]
 pylint = "^3.3.1"
