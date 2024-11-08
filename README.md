@@ -27,4 +27,20 @@ sudo pipx3 ensurepath --global  # optional
 pipx install --include-deps poetry poetry-plugin-export
 ```
 
+## Usage
+
+### Invoke
+
+[Invoke](https://www.pyinvoke.org/) is the Pythonic "Makefile." To use it in
+this template you must operate within the virtual environment:
+
+```sh
+poetry shell
+invoke <command>
+```
+
+To list commands, use `invoke --list`
+
+
+
 __This is not yet ready for deployment.__
