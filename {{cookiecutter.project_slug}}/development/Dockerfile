@@ -18,8 +18,8 @@ ENV PATH="/home/appuser/.local/bin:$PATH"
 RUN pipx install --include-deps poetry poetry-plugin-export
 COPY ./pyproject.toml ./poetry.lock ./
 RUN poetry config virtualenvs.create false && \
-    poetry config warnings.export false && \
-    poetry export --with=dev --output=requirements.txt && \
+    poetry self add poetry-plugin-export
+RUN poetry export --with=dev --output=requirements.txt && \
     python -m pip install -r requirements.txt
 
 # Clean up the build deps ------------------------------------------------
