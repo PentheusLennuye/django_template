@@ -27,7 +27,7 @@ pipx install --include-deps poetry poetry-plugin-export
 cp development/creds.env.example development/creds.env
 ```
 
-Edit _creds.env_ to your specific security needs.
+Edit _development/creds.env_ to your specific security needs.
 
 ## Usage
 
