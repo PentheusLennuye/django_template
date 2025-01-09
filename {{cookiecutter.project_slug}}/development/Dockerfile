@@ -1,5 +1,5 @@
-ARG ALPINE_VER="{{ cookiecutter.alpine_ver}}"
-ARG PYTHON_VER="{{ cookiecutter.python_ver }}"
+ARG ALPINE_VER="{{ cookiecutter.devimage_alpine_ver}}"
+ARG PYTHON_VER="{{ cookiecutter.devimage_python_ver }}"
 FROM python:${PYTHON_VER}-alpine${ALPINE_VER}
 
 RUN apk --update --no-progress --no-cache upgrade && \

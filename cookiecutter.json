@@ -1,9 +1,10 @@
 {
-  "alpine_ver": "3.20",
-  "author": "George Cummings <gmc@cummings-online.ca>",
-  "language_code": "en-ca",
   "project_name": "Django Project",
   "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '_') }}",
-  "python_ver": "3.12",
+  "author": "George Cummings <gmc@cummings-online.ca>",
+  "language_code": "en-ca",
+  "python_ver": "3.12.7",
+  "devimage_python_ver": "3.12",
+  "devimage_alpine_ver": "3.20",
   "tz": "America/Toronto"
 }
