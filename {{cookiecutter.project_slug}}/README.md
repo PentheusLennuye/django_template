@@ -1,12 +1,9 @@
-# Django Template
+# {{ cookiecutter.project_name }}
 
 <!-- markdownlint-disable MD031 -->
 <!-- markdownlint-disable MD032 -->
 
-This is a [Cookiecutter](https://cookiecutter.readthedocs.io/en/stable/)
-project template for Django. Replace this intro with your own.
-
-This cookie cutter template has the following features:
+This Django project has the following features:
 
 - The use of Docker and environment variables for the development workstation.
   This ensures that secret keys do not make their way into production docker
@@ -24,14 +21,47 @@ you develop.
 
 ```sh
 python3 -m pip install --user invoke pipx toml
-python3 -m pipx cookiecutter ensurepath
+python3 -m pipx ensurepath
 sudo pipx3 ensurepath --global  # optional
 pipx install --include-deps poetry poetry-plugin-export
 ```
 
-## Download and adapt
+## Usage
+
+### Invoke
+
+[Invoke](https://www.pyinvoke.org/) is the Pythonic "Makefile." To use it in
+this template you must operate within the virtual environment:
 
 ```sh
-git clone https://github.com/PentheusLennuye/django_template.git
-cookiecutter django_template
+poetry shell
+invoke <command>
 ```
+
+### Development
+
+#### Create the Docker image for the development environment
+
+```sh
+invoke build
+```
+
+#### Start the development server image
+
+```sh
+invoke debug
+```
+
+#### Stop the development server image
+
+```sh
+CTRL-C
+```
+
+#### Destroy the database
+
+```sh
+invoke destroy
+```
+
+To list all the other commands, use `invoke --list`

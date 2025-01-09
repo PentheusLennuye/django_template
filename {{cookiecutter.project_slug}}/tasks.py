@@ -14,7 +14,7 @@ except ModuleNotFoundError:
 
 from invoke import task
 
-PROJECT_NAME = "personal_journal"
+PROJECT_NAME = "{{ cookiecutter.project_slug }}"
 SHELL = "/bin/sh"
 
 BAD_PYPROJECT = 1

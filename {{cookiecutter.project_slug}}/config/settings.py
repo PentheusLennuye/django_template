@@ -85,7 +85,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 
 # Internationalization -------------------------------------------------------
-LANGUAGE_CODE = os.environ.get("DJANGO_LANGUAGE_CODE", "en-ca")
+LANGUAGE_CODE = os.environ.get("DJANGO_LANGUAGE_CODE", "{{ cookiecutter.language_code }}")
 TIME_ZONE = os.environ.get("DJANGO_TZ", "UTC")
 USE_I18N = True
 USE_TZ = True
